@@ -1,0 +1,87 @@
+.main-card{
+    background: $DarkGrayishBlue;
+    border-radius: 5px;
+    position: relative;
+    width: 360px;
+
+    &_advice{
+        @include flex-center;
+        margin-top: 30px;
+        color: $Neongreen;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    &_paragraph{
+        @include flex-center;
+        text-align: center;
+        margin: 20px;
+        color: $LightCyan;
+    }
+    &_border{
+        background: $LightCyan ;
+        border: .2px solid $LightCyan;
+        text-align: center;
+        border-radius: 10px;
+    }
+    &_quote{
+        color: $LightCyan;
+        font-weight: 800;
+    }
+    
+    &_desktop{
+        display: block;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 40px;
+}
+    &_mobile{
+    display: none;
+}
+    .button{
+        background-color:$Neongreen ;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        left: 44%;
+        top: 87%;
+        z-index: 4;
+
+        &:hover{
+            box-shadow: 1px 1px 60px 12px rgba(82, 255, 168, 1);
+            transition: all ease-in-out 0.3s;
+        }
+
+        &_img{
+            font-size: 60px;
+            padding: 8px;
+            
+        }
+
+}
+}
+
+
+@media screen and (max-width: 500px){
+    .main-card{
+        padding: 10px;
+        margin: 0 20px;
+
+            &_desktop{
+                display: none;
+               
+            }
+
+            &_mobile{
+                display: block;
+                width: 80%;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+    }
+}
